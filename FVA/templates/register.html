@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<style>
+    #registerbutton{
+        border: 2px solid blue;
+        color: white;
+        background-color: lightblue;
+        padding: 8px;
+        border-radius: 5px;
+        margin-left: 50px;
+        /* width: 500px; */
+    
+    }
+
+    input {
+        border: 1px solid rgb(24, 199, 129);
+        border-radius: 5px;
+        padding: 5px;
+    }
+</style>
+    <header>Welcome {{request.user}} </header>
+    <h2>
+         You've got to register here    </h2>
+        <br>
+        <form action="POST">
+                <div> Email
+                    <input type="email">
+                </div>
+                <br>
+
+            <div>
+                Password
+                <input type="password">
+                <br>
+                <br>
+                 Enter Password again
+                <input type="password">
+           </div>
+        </form>
+        <br>
+
+ 
+       <a id="registerbutton" href=" {% url 'login' %} "> Register </a> 
+
+
+    <h3>
+        <p>
+            Created an account Already?
+        </p>
+        <br>
+        <a href=" {% url 'login' %} "> Sign In </a> 
+    </h3>
+</body>
+</html>

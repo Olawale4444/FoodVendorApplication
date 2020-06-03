@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        .loginbutton{
+            border: 2px solid blue;
+            color: white;
+            background-color: lightblue;
+            padding: 8px;
+            border-radius: 5px;
+            margin-left: 50px;
+            /* width: 500px; */
+        
+        }
+    
+        input {
+            border: 1px solid rgb(24, 199, 129);
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        a {
+            border: 1px solid rgb(61, 10, 230);
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+    </style>
+
+    
+    <h2>
+         Login here
+        </h3>
+        <br>
+        <div> Email
+            <input type="email">
+        </div>
+        <br>
+
+    <div>
+        Password
+        <input type="password">
+        <br>
+   </div>
+
+   <br>
+   <br>
+   <a class="loginbutton" href=" {% url 'customer' %} "> Sign In as Customer</a>
+<br>
+<br>
+<br>
+   <a class="loginbutton" href=" {% url 'home' %} "> Sign In as Vendor</a>
+    </h2>
+
+    <h3>
+        New Here ?
+        <br>
+
+        <br>
+        <a href=" {% url 'Reg' %} "> Register </a>
+         
+
+</body>
+</html>

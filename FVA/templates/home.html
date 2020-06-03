@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+
+        table{
+            padding: 5px;
+            border: 2px solid grey;
+        }
+        th{
+            padding: 8px;
+            margin: 4px;
+            border: 2px solid grey;
+            font-size: large;
+        }
+    </style>
+
+    
+    <h2>
+        Welcome,
+        <p>
+            {{ request.user}} 's dashooard for the vendor
+
+        </p>
+        
+    </h2>
+
+
+<div class="card card-body">
+    <table class="table">
+        <tr>
+            <th>Product</th>
+            <th>Category</th>
+            <th>Price</th>
+        </tr>
+            <tr>
+                <td>Fried Rice </td>
+                <td>Lunch</td>
+                <td> 340 </td>
+            </tr>
+
+            <tr>
+                <td> Eba</td>
+                <td> Swallow</td>
+                <td>200 </td>
+            </tr>
+
+
+            <tr>
+                <td> Jollof</td>
+                <td> Lunch</td>
+                <td> 450 </td>
+            </tr>
+
+            {% for i in products %}
+							<tr>
+								<td>{{i.name}}</td>
+								<td>{{i.category}}</td>
+								<td>{{i.price}}</td>
+							</tr>
+				{% endfor %}
+        
+    </table>
+</div>
+
+    <div id="menu" >
+        <br>
+        <br>
+        <button> 
+            <h3>Create New Menu</h3>
+        </button>
+        
+
+        <h3>
+           Available Menu 
+        </h3>
+            <th> Food
+                <tr> </tr>
+                <tr>       Price </tr>
+                <tr>       Quantity   </tr>
+            </th>
+
+            <th>
+                <tr>Jollof</tr>
+                <tr>200</tr>
+                <tr>4 plates</tr>
+            </th>
+
+            <th>
+                <tr>Eba and stew</tr>
+                <tr>350</tr>
+                <tr> 1 plate </tr>
+            </th>
+       
+
+
+    </div>
+
+</body>
+</html>
